@@ -1,0 +1,13 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  quickestimatorapp:
+    build:
+      context: C:\H\Learning\Angular\Training\Assignment\Estimator\QuickEstimator\QuickEstimatorApp
+      dockerfile: Dockerfile
+    image: quickestimatorapp
+    ports:
+    - target: 80
+version: '3.4'
