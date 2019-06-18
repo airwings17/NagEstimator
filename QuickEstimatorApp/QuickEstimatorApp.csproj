@@ -70,12 +70,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EstimatorApp\.gitignore" />
+    <Content Include="EstimatorApp\e2e\protractor.conf.js" />
+    <Content Include="EstimatorApp\karma.conf.js" />
+    <Content Include="EstimatorApp\out-tsc\e2e\app.e2e-spec.js" />
+    <Content Include="EstimatorApp\out-tsc\e2e\app.po.js" />
+    <Content Include="EstimatorApp\src\app\app.component.css" />
+    <Content Include="EstimatorApp\src\app\app.component.html" />
+    <Content Include="EstimatorApp\src\favicon.ico" />
+    <Content Include="EstimatorApp\src\index.html" />
+    <Content Include="EstimatorApp\src\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EstimatorApp\.editorconfig" />
+    <Content Include="EstimatorApp\angular.json" />
+    <Content Include="EstimatorApp\browserslist" />
+    <Content Include="EstimatorApp\e2e\tsconfig.json" />
+    <Content Include="EstimatorApp\out-tsc\e2e\app.e2e-spec.js.map" />
+    <Content Include="EstimatorApp\out-tsc\e2e\app.po.js.map" />
+    <Content Include="EstimatorApp\package-lock.json" />
+    <Content Include="EstimatorApp\package.json" />
+    <Content Include="EstimatorApp\README.md" />
+    <Content Include="EstimatorApp\src\assets\.gitkeep" />
+    <Content Include="EstimatorApp\tsconfig.app.json" />
+    <Content Include="EstimatorApp\tsconfig.json" />
+    <Content Include="EstimatorApp\tsconfig.spec.json" />
+    <Content Include="EstimatorApp\tslint.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -86,6 +110,19 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="EstimatorApp\e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="EstimatorApp\e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\app\app.component.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\environments\environment.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\main.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\polyfills.ts" />
+    <TypeScriptCompile Include="EstimatorApp\src\test.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
