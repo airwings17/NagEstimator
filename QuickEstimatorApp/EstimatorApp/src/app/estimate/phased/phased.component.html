@@ -1,0 +1,417 @@
+<div>
+  <button mat-button color="primary" routerLink=""  >Back</button>
+  <button mat-button color="primary" (click)="SaveEfforts()">Save Efforts</button>
+
+
+</div>
+
+
+<div class="outer">
+
+  <form [formGroup]="phasedEstimateForm">
+    <table style="padding-left: 25px; width:100%">
+      <tr>
+        <td>Version Summarry</td>
+        <td>       
+            <input type="text" id="txtversionSummary" formControlName="versionSummarry" /></td>
+        <td>Estimates</td>
+        <td><label id="lblEstimates"  >{{calcluateOverAllEstimate()}} pds</label> </td>
+        <td>Cost ($)</td>
+        <td><label id="lblCost"  >{{calcluateOverAllEstimate()*28.5 | currency }}</label> </td>
+      </tr>
+      <tr>
+        <td>Estimated By</td>
+        <td><input type="text" id="txtEstimatedBY" formControlName="estimatedBy" /></td>
+        <td>Reviewed BY</td>
+        <td><input type="text" id="txtReviewedBy" formControlName="reviewedBy" /></td>
+        <td>Estimation Date</td>
+        <td><input type="date" id="dateEstimationDate" formControlName="estimationDate" /></td>
+      </tr>
+    </table>
+    <h2>Enter Phased Estimates</h2>
+    <hr>
+    <div id="wrapper">
+      <div style="padding-left: 25px;">
+        <div id="first">Task</div>
+        <div id="second">Sun-task</div>
+        <div id="third">Time</div>
+        <div id="fourth">Number of items</div>
+        <div id="fifth">Total {{calcluateOverAllEstimateInPD()}}</div>
+        <div id="sixth">Comment</div>
+      </div>
+    </div>
+    <br>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Requirement</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div id="wrapper">
+          <div id="first">.</div>
+          <div id="second">.</div>
+          <div id="third">.</div>
+          <div id="fourth">.</div>
+          <div id="fifth">{{calculateEstimateTotal(requirement)}}</div>
+          <div id="sixth">.</div>
+        </div>
+        <div formArrayName="requirementArray" id="wrapper" *ngFor="let req of requirement.controls; let i=index">
+          <div [formGroupName]="i">
+
+            <div id="first">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTask'+i}}" formControlName="Task" placeholder="Task">
+              </mat-form-field>
+            </div>
+            <div id="second">
+              <mat-form-field>
+                <input matInput id="{{'EstimateSubTask'+i}}" formControlName="SubTask" placeholder="Sub Task">
+              </mat-form-field>
+            </div>
+            <div id="third">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTime'+i}}" formControlName="Time" type="number" placeholder="Time">
+              </mat-form-field>
+            </div>
+            <div id="fourth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateNoOfItems'+i}}" formControlName="NoOfItems" type="number"
+                  placeholder="# of Items">
+              </mat-form-field>
+            </div>
+            <div id="fifth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTotal'+i}}" formControlName="Total">
+              </mat-form-field>
+            </div>
+            <div id="sixth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateComment'+i}}" formControlName="Comment" placeholder="Comment">
+              </mat-form-field>
+            </div>
+            <div id="cross">
+              <button mat-button id="{{'cross'+i}}" color="primary"
+                (click)="removeRequirementBlock(requirement,i);">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="addRequirementBlock(requirement);">Add New Row</button>
+        </div>
+
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Development</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div id="wrapper">
+          <div id="first">.</div>
+          <div id="second">.</div>
+          <div id="third">.</div>
+          <div id="fourth">.</div>
+          <div id="fifth">{{calculateEstimateTotal(dev)}}</div>
+          <div id="sixth">.</div>
+        </div>
+        <div formArrayName="devArray" id="wrapper" *ngFor="let dv of dev.controls; let i=index">
+          <div [formGroupName]="i">
+
+            <div id="first">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTask'+i}}" formControlName="Task" placeholder="Task">
+              </mat-form-field>
+            </div>
+            <div id="second">
+              <mat-form-field>
+                <input matInput id="{{'EstimateSubTask'+i}}" formControlName="SubTask" placeholder="Sub Task">
+              </mat-form-field>
+            </div>
+            <div id="third">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTime'+i}}" formControlName="Time" type="number" placeholder="Time">
+              </mat-form-field>
+            </div>
+            <div id="fourth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateNoOfItems'+i}}" formControlName="NoOfItems" type="number"
+                  placeholder="# of Items">
+              </mat-form-field>
+            </div>
+            <div id="fifth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTotal'+i}}" formControlName="Total">
+              </mat-form-field>
+            </div>
+            <div id="sixth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateComment'+i}}" formControlName="Comment" placeholder="Comment">
+              </mat-form-field>
+            </div>
+            <div id="cross">
+              <button mat-button id="{{'cross'+i}}" color="primary"
+                (click)="removeRequirementBlock(dev,i);">Remove</button>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="addRequirementBlock(dev);">Add New Row</button>
+        </div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Deployment</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div id="wrapper">
+          <div id="first">.</div>
+          <div id="second">.</div>
+          <div id="third">.</div>
+          <div id="fourth">.</div>
+          <div id="fifth">{{calculateEstimateTotal(deployment)}}</div>
+          <div id="sixth">.</div>
+        </div>
+        <div formArrayName="deploymentArray" id="wrapper" *ngFor="let dep of deployment.controls; let i=index">
+          <div [formGroupName]="i">
+
+            <div id="first">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTask'+i}}" formControlName="Task" placeholder="Task">
+              </mat-form-field>
+            </div>
+            <div id="second">
+              <mat-form-field>
+                <input matInput id="{{'EstimateSubTask'+i}}" formControlName="SubTask" placeholder="Sub Task">
+              </mat-form-field>
+            </div>
+            <div id="third">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTime'+i}}" formControlName="Time" type="number" placeholder="Time">
+              </mat-form-field>
+            </div>
+            <div id="fourth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateNoOfItems'+i}}" formControlName="NoOfItems" type="number"
+                  placeholder="# of Items">
+              </mat-form-field>
+            </div>
+            <div id="fifth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTotal'+i}}" formControlName="Total">
+              </mat-form-field>
+            </div>
+            <div id="sixth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateComment'+i}}" formControlName="Comment" placeholder="Comment">
+              </mat-form-field>
+            </div>
+            <div id="cross">
+              <button mat-button id="{{'cross'+i}}" color="primary"
+                (click)="removeRequirementBlock(deployment,i);">Remove</button>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="addRequirementBlock(deployment);">Add New Row</button>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Testing</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div id="wrapper">
+          <div id="first">.</div>
+          <div id="second">.</div>
+          <div id="third">.</div>
+          <div id="fourth">.</div>
+          <div id="fifth">{{calculateEstimateTotal(qa)}}</div>
+          <div id="sixth">.</div>
+        </div>
+        <div formArrayName="qaArray" id="wrapper" *ngFor="let development of qa.controls; let i=index">
+          <div [formGroupName]="i">
+
+            <div id="first">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTask'+i}}" formControlName="Task" placeholder="Task">
+              </mat-form-field>
+            </div>
+            <div id="second">
+              <mat-form-field>
+                <input matInput id="{{'EstimateSubTask'+i}}" formControlName="SubTask" placeholder="Sub Task">
+              </mat-form-field>
+            </div>
+            <div id="third">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTime'+i}}" formControlName="Time" type="number" placeholder="Time">
+              </mat-form-field>
+            </div>
+            <div id="fourth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateNoOfItems'+i}}" formControlName="NoOfItems" type="number"
+                  placeholder="# of Items">
+              </mat-form-field>
+            </div>
+            <div id="fifth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTotal'+i}}" formControlName="Total">
+              </mat-form-field>
+            </div>
+            <div id="sixth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateComment'+i}}" formControlName="Comment" placeholder="Comment">
+              </mat-form-field>
+            </div>
+            <div id="cross">
+              <button mat-button id="{{'cross'+i}}" color="primary"
+                (click)="removeRequirementBlock(qa,i);">Remove</button>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="addRequirementBlock(qa);">Add New Row</button>
+        </div>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>UAT</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div id="wrapper">
+          <div id="first">.</div>
+          <div id="second">.</div>
+          <div id="third">.</div>
+          <div id="fourth">.</div>
+          <div id="fifth">{{calculateEstimateTotal(uat)}}</div>
+          <div id="sixth">.</div>
+        </div>
+        <div formArrayName="uatArray" id="wrapper" *ngFor="let development of uat.controls; let i=index">
+          <div [formGroupName]="i">
+
+            <div id="first">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTask'+i}}" formControlName="Task" placeholder="Task">
+              </mat-form-field>
+            </div>
+            <div id="second">
+              <mat-form-field>
+                <input matInput id="{{'EstimateSubTask'+i}}" formControlName="SubTask" placeholder="Sub Task">
+              </mat-form-field>
+            </div>
+            <div id="third">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTime'+i}}" formControlName="Time" type="number" placeholder="Time">
+              </mat-form-field>
+            </div>
+            <div id="fourth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateNoOfItems'+i}}" formControlName="NoOfItems" type="number"
+                  placeholder="# of Items">
+              </mat-form-field>
+            </div>
+            <div id="fifth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTotal'+i}}" formControlName="Total">
+              </mat-form-field>
+            </div>
+            <div id="sixth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateComment'+i}}" formControlName="Comment" placeholder="Comment">
+              </mat-form-field>
+            </div>
+            <div id="cross">
+              <button mat-button id="{{'cross'+i}}" color="primary"
+                (click)="removeRequirementBlock(uat,i);">Remove</button>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="addRequirementBlock(uat);">Add New Row</button>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Knowledge Transfer</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div id="wrapper">
+          <div id="first">.</div>
+          <div id="second">.</div>
+          <div id="third">.</div>
+          <div id="fourth">.</div>
+          <div id="fifth">{{calculateEstimateTotal(kt)}}</div>
+          <div id="sixth">.</div>
+        </div>
+        <div formArrayName="ktArray" id="wrapper" *ngFor="let development of kt.controls; let i=index">
+          <div [formGroupName]="i">
+
+            <div id="first">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTask'+i}}" formControlName="Task" placeholder="Task">
+              </mat-form-field>
+            </div>
+            <div id="second">
+              <mat-form-field>
+                <input matInput id="{{'EstimateSubTask'+i}}" formControlName="SubTask" placeholder="Sub Task">
+              </mat-form-field>
+            </div>
+            <div id="third">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTime'+i}}" formControlName="Time" type="number" placeholder="Time">
+              </mat-form-field>
+            </div>
+            <div id="fourth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateNoOfItems'+i}}" formControlName="NoOfItems" type="number"
+                  placeholder="# of Items">
+              </mat-form-field>
+            </div>
+            <div id="fifth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateTotal'+i}}" formControlName="Total">
+              </mat-form-field>
+            </div>
+            <div id="sixth">
+              <mat-form-field>
+                <input matInput id="{{'EstimateComment'+i}}" formControlName="Comment" placeholder="Comment">
+              </mat-form-field>
+            </div>
+            <div id="cross">
+              <button mat-button id="{{'cross'+i}}" color="primary"
+                (click)="removeRequirementBlock(kt,i);">Remove</button>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <button mat-button color="primary" (click)="addRequirementBlock(kt);">Add New Row</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+
+
+
+
+
+
+
+
+  </form>
+
+</div>

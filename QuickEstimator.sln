@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickEstimatorApp", "QuickEstimatorApp\QuickEstimatorApp.csproj", "{EF683B5F-8DB5-4DBC-97D4-482792577DC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickEstimatorAPI", "QuickEstimatorAPI\QuickEstimatorAPI.csproj", "{AF4E1E54-4965-400B-A703-CA68E3E337E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickEstimatorAPI", "QuickEstimatorAPI\QuickEstimatorAPI.csproj", "{A25BE97D-A1C4-4032-A359-529ECD3D71AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickEstimationDAL", "QuickEstimationDAL\QuickEstimationDAL.csproj", "{9FA6469E-9204-4005-A78F-4C693916BDF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{EF683B5F-8DB5-4DBC-97D4-482792577DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF683B5F-8DB5-4DBC-97D4-482792577DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF683B5F-8DB5-4DBC-97D4-482792577DC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF4E1E54-4965-400B-A703-CA68E3E337E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF4E1E54-4965-400B-A703-CA68E3E337E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF4E1E54-4965-400B-A703-CA68E3E337E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF4E1E54-4965-400B-A703-CA68E3E337E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25BE97D-A1C4-4032-A359-529ECD3D71AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25BE97D-A1C4-4032-A359-529ECD3D71AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25BE97D-A1C4-4032-A359-529ECD3D71AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25BE97D-A1C4-4032-A359-529ECD3D71AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA6469E-9204-4005-A78F-4C693916BDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA6469E-9204-4005-A78F-4C693916BDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA6469E-9204-4005-A78F-4C693916BDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA6469E-9204-4005-A78F-4C693916BDF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

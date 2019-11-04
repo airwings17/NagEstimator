@@ -1,0 +1,86 @@
+19-06-2019 10.53.34 AM	This log contains information about the import schema operation into project 'EstimatorDB' on computer 'HARSH682-01' by user 'Harsh682'.
+19-06-2019 10.53.35 AM	Import of database schema has started.
+19-06-2019 10.53.42 AM	Gathering database credentials
+19-06-2019 10.53.42 AM	Gathering database options
+19-06-2019 10.53.42 AM	Gathering generic database scoped configuration option
+19-06-2019 10.53.42 AM	Gathering users
+19-06-2019 10.53.42 AM	Gathering roles
+19-06-2019 10.53.42 AM	Gathering application roles
+19-06-2019 10.53.42 AM	Gathering role memberships
+19-06-2019 10.53.42 AM	Gathering filegroups
+19-06-2019 10.53.42 AM	Gathering full-text catalogs
+19-06-2019 10.53.42 AM	Gathering assemblies
+19-06-2019 10.53.42 AM	Gathering certificates
+19-06-2019 10.53.42 AM	Gathering asymmetric keys
+19-06-2019 10.53.42 AM	Gathering symmetric keys
+19-06-2019 10.53.42 AM	Gathering encrypted symmetric keys
+19-06-2019 10.53.42 AM	Gathering schemas
+19-06-2019 10.53.42 AM	Gathering XML schema collections
+19-06-2019 10.53.42 AM	Gathering user-defined data types
+19-06-2019 10.53.42 AM	Gathering user-defined types
+19-06-2019 10.53.42 AM	Gathering table types
+19-06-2019 10.53.42 AM	Gathering unique keys for table types
+19-06-2019 10.53.42 AM	Gathering primary keys for table types
+19-06-2019 10.53.42 AM	Gathering indexes for table types
+19-06-2019 10.53.42 AM	Gathering check constraints for table types
+19-06-2019 10.53.42 AM	Gathering default constraints for table types
+19-06-2019 10.53.42 AM	Gathering partition functions
+19-06-2019 10.53.42 AM	Gathering partition schemes
+19-06-2019 10.53.42 AM	Gathering functions
+19-06-2019 10.53.42 AM	Gathering encrypted functions
+19-06-2019 10.53.42 AM	Gathering aggregates
+19-06-2019 10.53.42 AM	Gathering procedures
+19-06-2019 10.53.42 AM	Gathering encrypted procedures
+19-06-2019 10.53.42 AM	Gathering tables
+19-06-2019 10.53.42 AM	Gathering primary keys
+19-06-2019 10.53.42 AM	Gathering unique constraints
+19-06-2019 10.53.42 AM	Gathering foreign keys
+19-06-2019 10.53.42 AM	Gathering default constraints
+19-06-2019 10.53.42 AM	Gathering check constraints
+19-06-2019 10.53.42 AM	Gathering views
+19-06-2019 10.53.42 AM	Gathering encrypted views
+19-06-2019 10.53.42 AM	Gathering indexes
+19-06-2019 10.53.42 AM	Gathering statistics
+19-06-2019 10.53.42 AM	Gathering full-text index stoplists
+19-06-2019 10.53.42 AM	Gathering search property lists
+19-06-2019 10.53.42 AM	Gathering search properties
+19-06-2019 10.53.42 AM	Gathering full-text indexes
+19-06-2019 10.53.42 AM	Gathering column store indexes
+19-06-2019 10.53.42 AM	Gathering spatial indexes
+19-06-2019 10.53.42 AM	Gathering XML indexes
+19-06-2019 10.53.42 AM	Gathering Selective XML indexes
+19-06-2019 10.53.42 AM	Gathering encrypted triggers
+19-06-2019 10.53.42 AM	Gathering triggers
+19-06-2019 10.53.42 AM	Gathering encrypted and clr ddl triggers
+19-06-2019 10.53.42 AM	Gathering ddl triggers
+19-06-2019 10.53.42 AM	Gathering synonyms
+19-06-2019 10.53.42 AM	Gathering defaults
+19-06-2019 10.53.42 AM	Gathering data constraint uddt bindings
+19-06-2019 10.53.42 AM	Gathering rules
+19-06-2019 10.53.42 AM	Gathering data constraint uddt bindings
+19-06-2019 10.53.42 AM	Gathering message types
+19-06-2019 10.53.42 AM	Gathering queues
+19-06-2019 10.53.42 AM	Gathering contracts
+19-06-2019 10.53.42 AM	Gathering services
+19-06-2019 10.53.42 AM	Gathering event notifications
+19-06-2019 10.53.42 AM	Gathering remote service bindings
+19-06-2019 10.53.42 AM	Gathering broker priorities
+19-06-2019 10.53.42 AM	Gathering signatures
+19-06-2019 10.53.42 AM	Gathering data compression options
+19-06-2019 10.53.42 AM	Gathering sequence types
+19-06-2019 10.53.42 AM	Gathering security policies
+19-06-2019 10.53.42 AM	Gather column encryption keys
+19-06-2019 10.53.42 AM	Gathering column master keys
+19-06-2019 10.53.42 AM	Gathering external data sources
+19-06-2019 10.53.42 AM	Gathering external file formats
+19-06-2019 10.53.42 AM	Gathering external tables
+19-06-2019 10.53.42 AM	Gathering database permissions
+19-06-2019 10.53.42 AM	Gathering extended properties
+19-06-2019 10.53.42 AM	Gathering credentials
+19-06-2019 10.53.42 AM	Gathering logins
+19-06-2019 10.53.42 AM	Gathering server audits
+19-06-2019 10.53.43 AM	Scanning project for duplicate elements
+19-06-2019 10.53.44 AM	Finished duplicate element processing
+19-06-2019 10.53.44 AM	Finished importing database.
+19-06-2019 10.53.44 AM	A summary of the import was saved to the following location: C:\H\Learning\Angular\Training\Assignment\Estimator\nagEstimator\EstimatorDB\Import Schema Logs\EstimatorDB_20190619052334.log
+19-06-2019 10.53.44 AM	Click Finish to continue...

@@ -1,0 +1,46 @@
+#wrapper {
+    width:1300px;
+    clear:both;   
+  }
+  .outer
+  {
+    height:100%; 
+    overflow: auto;
+    float: left;
+  }
+  #first {   
+    width:200px;
+    float:left;
+    border:0px solid;
+  }
+  #second {   
+    width:200px;
+    float:left;
+    border:0px solid;
+  }
+  #third {   
+    width:200px;
+    float:left;
+    border:0px solid;
+  }
+  #fourth {   
+    width:200px;
+    float:left;
+    border:0px solid;
+  }
+  #fifth {   
+    width:200px;
+    float:left;
+    border:0px solid;
+    font-weight: bold;
+  }
+  #sixth {   
+    width:200px;
+    float:left;
+    border:0px solid;
+  }
+
+  #cross {   
+    width:50px;
+    float:left;    
+  }

@@ -3,3 +3,16 @@
 ################################################################################
 
 /.vs
+/EstimatorDB/bin/Debug
+/EstimatorDB/obj/Debug
+/packages
+/QuickEstimationDAL/bin/Debug
+/QuickEstimationDAL/obj/Debug
+/QuickEstimatorAPI/bin
+/QuickEstimatorAPI/obj/Debug
+/QuickEstimatorApp/bin
+/QuickEstimatorApp/EstimatorApp/dist
+/QuickEstimatorApp/EstimatorApp/node_modules
+/QuickEstimatorApp/obj
+/WebApplication1/bin/roslyn
+/WebApplication2

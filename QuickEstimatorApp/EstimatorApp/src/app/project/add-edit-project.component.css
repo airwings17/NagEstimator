@@ -1,0 +1,24 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+   
+      margin: auto;
+      width: 60%;
+      border: 3px solid gray;
+      padding: 10px;
+  
+
+  }
+  .center
+  {
+    margin: auto;
+    width: 175px;   
+    padding: 10px;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+  .mat-checkbox{
+  padding-left: 15px !important ;
+}

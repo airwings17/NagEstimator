@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[Projects]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [ProjectName] NVARCHAR(50) NULL, 
+    [Manager] NVARCHAR(50) NULL, 
+    [CostPerhr] MONEY NULL DEFAULT 35, 
+    [Team] NVARCHAR(50) NULL, 
+    [EmailLink] NVARCHAR(500) NULL, 
+    [SketchLink] NVARCHAR(500) NULL, 
+    [JiraLink] NVARCHAR(500) NULL, 
+    [TechnicalApproachNeeded] BIT NULL DEFAULT 1, 
+    [EnvtSetupAndRampupNeeded] BIT NULL DEFAULT 1, 
+    [BrowserTestingNeeded] BIT NULL DEFAULT 1, 
+    [DeviceTestingNeeded] BIT NULL DEFAULT 1, 
+    [PerformanceTestingNeeded] BIT NULL DEFAULT 1, 
+    [AutomationTestingNeeded] BIT NULL DEFAULT 1, 
+    [RegressionTestingNeeded] BIT NULL DEFAULT 1, 
+    [ReleaseDocumentNeeded] BIT NULL DEFAULT 1, 
+    [AdminGuideNeeded] BIT NULL DEFAULT 1, 
+    [UserGuideNeeded] BIT NULL DEFAULT 1, 
+    [PMEffortsinPercentage] INT NULL DEFAULT 15, 
+    [Created] DATETIME NULL, 
+    [Modified] DATETIME NULL, 
+    [CreatedBy] NVARCHAR(100) NULL, 
+    [ModifiedBy] NVARCHAR(100) NULL
+)

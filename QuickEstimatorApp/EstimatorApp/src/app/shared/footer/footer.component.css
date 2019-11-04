@@ -1,0 +1,16 @@
+.footer
+{
+  
+    bottom: 0;
+    width: 100%; 
+    
+    
+    background-color: burlywood;
+    min-height: 50px;
+    clear: both;
+    position: relative;
+    height: 20px;
+    margin-top: -200px;
+
+}
+

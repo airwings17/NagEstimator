@@ -1,0 +1,75 @@
+<button mat-button color="primary" routerLink="">Back</button> 
+
+<H1 class="center">{{pageTitle}}</H1>
+
+
+
+<form [formGroup]="projectForm" (ngSubmit)="onFormSubmit(projectForm.value)"> 
+
+<div class="example-container">  
+        <mat-form-field>
+          <input matInput formControlName="ProjectName" placeholder="Project Name">
+        </mat-form-field>  
+        <mat-form-field>
+          <!-- <textarea matInput placeholder="Textarea"></textarea> -->
+          <input matInput formControlName="projectUrlName" placeholder="Project Url">     
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="CostPerhr" placeholder="Resource Cost per Hour($)" >
+        </mat-form-field>
+      
+        <mat-radio-group formControlName="Team"  aria-labelledby="example-radio-group-label" title="Project Type" class="example-radio-group" >
+            <mat-radio-button class="example-radio-button" *ngFor="let projectType of projectTypes" [value]="projectType">
+              {{projectType}}
+            </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <div class="include" >    
+        <mat-checkbox formControlName="TechnicalApproachNeeded" >Technical Approach</mat-checkbox>
+        <mat-checkbox formControlName="EnvtSetupAndRampupNeeded" >Environment Setup</mat-checkbox>
+        <hr>
+
+        <mat-checkbox formControlName="BrowserTestingNeeded" >Browser</mat-checkbox>
+        <mat-checkbox formControlName="DeviceTestingNeeded" >Device</mat-checkbox>
+        <mat-checkbox formControlName="RegressionTestingNeeded" >Regression</mat-checkbox>
+        <mat-checkbox formControlName="PerformanceTestingNeeded" >Performance</mat-checkbox>
+        <mat-checkbox formControlName="AutomationTestingNeeded" >Automation</mat-checkbox>
+
+        <hr>
+        <mat-checkbox formControlName="UATSupportNeeded" >UAT Support </mat-checkbox>
+        <mat-checkbox formControlName="WarrantySupportNeeded" >Warranty Support</mat-checkbox>
+        <mat-checkbox formControlName="ReleaseDocumentNeeded" >Release Document</mat-checkbox>
+        <hr>
+        <mat-checkbox formControlName="AdminGuideNeeded" >Admin Guide</mat-checkbox>
+        <mat-checkbox formControlName="UserGuideNeeded" >User Guide</mat-checkbox>
+      </div>
+
+      <mat-form-field>
+          <input matInput formControlName="PMEffortsinPercentage" placeholder="PM efforts (%)">
+      </mat-form-field> 
+      <br>
+      <mat-form-field>
+          <input matInput formControlName="EmailLink" placeholder="Email Link">
+      </mat-form-field> 
+      <mat-form-field>
+          <input matInput formControlName="SketchLink" placeholder="Sketch Link">
+      </mat-form-field> 
+      <mat-form-field>
+          <input matInput formControlName="JiraLink" placeholder="Jira Link">
+      </mat-form-field>
+      
+      <div *ngIf="isLoading">
+        <mat-spinner></mat-spinner>
+        </div>
+        
+      <button mat-button color="primary" type="submit" >Save</button> 
+  </div>
+  <p style="min-height:100px; padding-bottom:50px;">
+      <br>Dirty: {{ projectForm.dirty}} 
+      <br>Touched : {{ projectForm.touched}} 
+      <br>Valid : {{ projectForm.valid}} 
+      <br>Valid : {{ projectForm.status}} 
+      <br>Value : {{projectForm}}
+    </p>
+
+</form>
